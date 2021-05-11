@@ -11,6 +11,9 @@
             <div class="">            
             <table class="table table-bordered table-hover">
                 <h3 class="align-center border-bottom">Liste des Etudiant Inscrit</h3>
+                <div class="d-flex justify-content-end">
+                    <a href="#" class="btn btn-primary">Add Etudiant</a>
+                </div>               
                 <thead>
                     <tr>
                         <th scope="col">#</th>
