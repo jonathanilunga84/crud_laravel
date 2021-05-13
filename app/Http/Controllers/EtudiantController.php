@@ -18,6 +18,11 @@ class EtudiantController extends Controller
         return view("pages.createEtudiant", compact("classes"));
     }
 
+    public function edit(Etudiant $etudiant){
+        $classes = Classe::all();
+        return view("pages.editEtudiant", compact("etudiant","classes"));
+    }
+
     public function store(Request $request){
         $request->validate([
             "nom"=>"required",
@@ -33,6 +38,24 @@ class EtudiantController extends Controller
             "classe_id"=>$request->classe_id
         ]);
         return back()->with("success", "Etudiant ajouté avec succé");
+        //return 'ADD';
+    }
+
+    public function update(Request $request, Etudiant $etudiant){
+        $request->validate([
+            "nom"=>"required",
+            "postnom"=>"required",
+            "classe_id"=>"required"
+        ]);
+        
+        //Etudiant::create($request->all()); //accodition de definir un fillename ds le models Etudiant
+        
+        $etudiant->update([
+            "nom"=>$request->nom,
+            "postnom"=>$request->postnom,
+            "classe_id"=>$request->classe_id
+        ]);
+        return back()->with("success", "Etudiant Mise ajour avec succé");
         //return 'ADD';
     }
 

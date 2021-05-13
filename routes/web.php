@@ -28,12 +28,13 @@ Route::get('about', [PostsController::class,'index'])->name('About');
 //Route::get('Etudiant', [PostsController::class,'etudiant'])->name('Etudiant');
 
 Route::get('Etudiant', [EtudiantController::class,'index'])->name('Etudiant');
-
 Route::get('/Etudiant/Create', [EtudiantController::class,'create'])->name('Create');
+Route::get('/Etudiant/{etudiant}', [EtudiantController::class,'edit'])->name('Etudiant.edit');
 
 Route::post('/Etudiant/Create', [EtudiantController::class,'store'])->name('AjoutEtudiant');
 
 Route::delete('/Etudiant/{etudiant}', [EtudiantController::class,'delete'])->name('Etudiant.supprimer');
+Route::put('/Etudiant/{etudiant}', [EtudiantController::class,'update'])->name('Etudiant.update');
 /*
 Route::get('/hg', function () {
     return view('pages.Home');
