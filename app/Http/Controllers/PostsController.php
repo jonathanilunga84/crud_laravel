@@ -9,9 +9,4 @@ class PostsController extends Controller
     public function index(){
         return view('pages.About');
    }
-
-   public function etudiant(){
-        return view('pages.Application');
-    }
-
 }

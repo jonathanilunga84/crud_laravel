@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\EtudiantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,13 @@ Route::get('/', function () {
 
 Route::get('about', [PostsController::class,'index'])->name('About');
 
-Route::get('Etudiant', [PostsController::class,'etudiant'])->name('Etudiant');
+//Route::get('Etudiant', [PostsController::class,'etudiant'])->name('Etudiant');
 
+Route::get('Etudiant', [EtudiantController::class,'index'])->name('Etudiant');
+
+Route::get('/Etudiant/Create', [EtudiantController::class,'create'])->name('Create');
+
+Route::post('/Etudiant/Create', [EtudiantController::class,'store'])->name('AjoutEtudiant');
 /*
 Route::get('/hg', function () {
     return view('pages.Home');
