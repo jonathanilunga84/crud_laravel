@@ -32,6 +32,8 @@ Route::get('Etudiant', [EtudiantController::class,'index'])->name('Etudiant');
 Route::get('/Etudiant/Create', [EtudiantController::class,'create'])->name('Create');
 
 Route::post('/Etudiant/Create', [EtudiantController::class,'store'])->name('AjoutEtudiant');
+
+Route::delete('/Etudiant/{etudiant}', [EtudiantController::class,'delete'])->name('Etudiant.supprimer');
 /*
 Route::get('/hg', function () {
     return view('pages.Home');

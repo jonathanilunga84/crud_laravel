@@ -36,10 +36,10 @@ class EtudiantController extends Controller
         //return 'ADD';
     }
 
-    /*public function delete(Etudiant $etudiant){
-        $nom_complet = $etudiant->nom." " $etudiant->postnom;
+    public function delete(Etudiant $etudiant){
+        $nom_complet = $etudiant->nom." ". $etudiant->postnom;
         $etudiant->delete();
 
-        return back()->with("successDelete", "L'étudiant '$nom_complet' supprimé avec succès!")
-    }*/
+        return back()->with("successDelete", "L'étudiant '$nom_complet' supprimé avec succès!");
+    }
 }

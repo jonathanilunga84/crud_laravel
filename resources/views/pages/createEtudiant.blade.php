@@ -11,9 +11,9 @@
                 <h3 class="border-bottom ">Ajout d'un nouvel etudiant</h3>
                 @if(session()->has('success'))
                     <div class="alert alert-success">
-                        <p>{{ session()->get('success') }}</p>
+                        <h3>{{ session()->get('success') }}</h3>
                     </div>
-                    {{ session()->get('success') }}
+                    
                 @endif
                 @if($errors->any())
                     <ul class="alert alert-danger">

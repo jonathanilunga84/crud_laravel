@@ -8,7 +8,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-10">
-            <div class="">            
+            <div class=""> 
+            @if(session()->has('successDelete'))
+                    <div class="alert alert-success">
+                        <h3>{{ session()->get('successDelete') }}</h3>
+                    </div>
+                    
+            @endif           
             <table class="table table-bordered table-hover">
                 <h3 class="align-center border-bottom">Liste des Etudiant Inscrit</h3>
                 <div class="d-flex justify-content-between">
@@ -34,7 +40,12 @@
                             <td>{{ $etudiant->classe->libelle }}</td>
                             <td>
                                 <a href="#" class="btn btn-info">Edit</a>
-                                <a href="#" class="btn btn-danger">Supprimer</a>
+                                <a href="#" class="btn btn-danger" onclick="if(confirm('Voulez-vous vraiment supprimer cet etudiant ?')){ document.getElementById('form-{{$etudiant->id}}').submit() }">Supprimer</a>
+                                
+                                <form id="form-{{$etudiant->id}}" action="{{ route('Etudiant.supprimer', ['etudiant'=>$etudiant->id]) }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="delete" />
+                                </form>
                             </td>                      
                         <tr>
                     @endforeach
