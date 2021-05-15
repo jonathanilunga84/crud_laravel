@@ -36,6 +36,7 @@ class EtudiantController extends Controller
             "nom"=>$request->nom,
             "postnom"=>$request->postnom,
             "classe_id"=>$request->classe_id
+
         ]);
         return back()->with("success", "Etudiant ajouté avec succé");
         //return 'ADD';
@@ -47,7 +48,7 @@ class EtudiantController extends Controller
             "postnom"=>"required",
             "classe_id"=>"required"
         ]);
-        
+
         //Etudiant::create($request->all()); //accodition de definir un fillename ds le models Etudiant
         
         $etudiant->update([

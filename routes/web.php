@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\ImagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +40,8 @@ Route::put('/Etudiant/{etudiant}', [EtudiantController::class,'update'])->name('
 Route::get('/hg', function () {
     return view('pages.Home');
 });*/
+Route::get('Contact', [PostsController::class,'contact'])->name('Contact');
+Route::post('/Contact/Create', [PostsController::class,'store'])->name('Contact.Add');
 
+Route::get('Upload', [ImagesController::class,'index'])->name('Upload');
+Route::post('Upload/image', [ImagesController::class,'store'])->name('Upload.Add');
