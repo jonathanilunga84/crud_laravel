@@ -23,9 +23,17 @@ class ImageRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+       /* return [
             //
             "monImage"=>"required|image",
-        ];
+        ];*/
+
+        $rules [] = array();
+        $photos = count($this->input('monImage'));
+        foreach(range(0, $photos) as $index){
+            $rules['photos.'.$index] = 'image|mimes:jpeg,bmp,png|max:1024';
+
+        }
+        return $rules;
     }
 }

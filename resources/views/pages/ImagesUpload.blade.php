@@ -20,7 +20,7 @@
             <form action="{{ route('Upload.Add') }}" method="POST" enctype="multipart/form-data" >
                 @csrf
                 
-                <input type="file" name="monImage[]" />
+                <input type="file" name="monImage[]" multiple />
                 <p>{{$errors->first('monImage')}}</p>
                 <button class="form-control btn btn-success">Uploader</button>
             </form>
