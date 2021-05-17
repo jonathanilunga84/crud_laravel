@@ -26,11 +26,25 @@
             </form>
         </div>
         <div class="row">
-        <img src="{{asset('storage/images/MENA_1621077879.jpeg')}}" alt="NNNN">
             @foreach($photos as $photo)
-            <div class="col-sm-12 col-md-4 d-flex align-items-center justify-content-center">
-                <h3>{{$photo->id}}</h3>
-                <img src="{{asset('storage/'.$photo->img)}}" alt="img pas vue" />
+            <h3>{{$photo->id1}}</h3>
+            <div  id="container-img" class="col-sm-12 col-md-4 d-flex align-items-center justify-content-center bg-danger1">
+               <div class="row">
+                    <div class="col-ms-12 col-md-12">
+                        <img id="imgBd" src="{{asset('storage/'.$photo->img)}}" alt="img pas vue" />
+
+                        <div class="row">
+                            <div class="col-ms-12 col-md-12">
+                            <p id="conte">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti enim alias mollitia dolorum nostrum dolores sapiente aliquid blanditiis numquam? Nam, atque magnam! Eius, perspiciatis. Aperiam error eum nam expedita quos.
+                            </p>
+                            </div> 
+                        </div>
+                    </div>
+                                       
+               </div>
+                
+                
             </div>
             @endforeach
         </div>

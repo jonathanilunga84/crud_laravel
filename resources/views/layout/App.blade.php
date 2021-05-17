@@ -6,6 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield('title')</title>
         <link rel="stylesheet" href="{{ asset('bootstrap4.css') }}" />
+        <link rel="stylesheet" href="{{ asset('app.css') }}" />
+        <style>
+           #conte{
+            border-left:1px solid red;
+            border-right:1px solid red;
+            border-bottom:1px solid red;
+            width:100%;
+            height-: 150px;
+            text-align:justify;
+            object-fit:cover;
+            /*line-height: 250px;*/
+            /*transform: translate(50%, 50%);*/
+           }
+            #imgBd{
+            width-:;
+            height-: 250px;
+            border-left-:5px;
+            margin-bottom-: 10px;
+            padding-bottom: 15px;
+            border-:5px solid red;
+            border-left:1px solid red;
+            border-right:1px solid red;
+            border-bottom-:1px solid red;
+            }
+            img{
+                width:100%;
+                height: 250px;
+                border-:5px solid black;
+                object-fit:cover;
+            }
+            
+            #container-img{
+                border-:1px solid black;
+                margin-left-: 5px;
+                margin-bottom: 15px;
+            }
+        </style>
     </head>
     <body>
         <ul>
