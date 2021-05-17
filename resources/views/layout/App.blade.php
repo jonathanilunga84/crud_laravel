@@ -8,10 +8,13 @@
         <link rel="stylesheet" href="{{ asset('bootstrap4.css') }}" />
         <link rel="stylesheet" href="{{ asset('app.css') }}" />
         <style>
+        #ct{
+            border:5px solid red;
+        }
            #conte{
-            border-left:1px solid red;
+            /*border-left:1px solid red;
             border-right:1px solid red;
-            border-bottom:1px solid red;
+            border-bottom:1px solid red;*/
             width:100%;
             height-: 150px;
             text-align:justify;
@@ -26,8 +29,8 @@
             margin-bottom-: 10px;
             padding-bottom: 15px;
             border-:5px solid red;
-            border-left:1px solid red;
-            border-right:1px solid red;
+           /* border-left:1px solid red;
+            border-right:1px solid red;*/
             border-bottom-:1px solid red;
             }
             img{
@@ -41,6 +44,9 @@
                 border-:1px solid black;
                 margin-left-: 5px;
                 margin-bottom: 15px;
+            }
+            #ct:hover{
+                border: 3px solid green;
             }
         </style>
     </head>

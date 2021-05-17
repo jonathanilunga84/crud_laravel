@@ -28,20 +28,22 @@
         <div class="row">
             @foreach($photos as $photo)
             <h3>{{$photo->id1}}</h3>
-            <div  id="container-img" class="col-sm-12 col-md-4 d-flex align-items-center justify-content-center bg-danger1">
+            <div  id="container-img" class="col-sm-12 col-md-4 d-flex1 align-items-center1 justify-content-center1 bg-danger1">
                <div class="row">
+               
                     <div class="col-ms-12 col-md-12">
-                        <img id="imgBd" src="{{asset('storage/'.$photo->img)}}" alt="img pas vue" />
+                        <div id="ct">
+                            <img id="imgBd" src="{{asset('storage/'.$photo->img)}}" alt="img pas vue" />
 
-                        <div class="row">
-                            <div class="col-ms-12 col-md-12">
-                            <p id="conte">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti enim alias mollitia dolorum nostrum dolores sapiente aliquid blanditiis numquam? Nam, atque magnam! Eius, perspiciatis. Aperiam error eum nam expedita quos.
-                            </p>
-                            </div> 
+                            <div class="row">
+                                <div class="col-ms-12 col-md-12">
+                                <p id="conte">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti enim alias mollitia dolorum nostrum dolores sapiente aliquid blanditiis numquam? Nam, atque magnam! Eius, perspiciatis. Aperiam error eum nam expedita quos.
+                                </p>
+                                </div> 
+                            </div>
                         </div>
-                    </div>
-                                       
+                    </div>                      
                </div>
                 
                 
