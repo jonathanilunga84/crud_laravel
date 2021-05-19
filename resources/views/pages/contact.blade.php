@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <label for="noom">Nom:</label>
                         <input type="text" id="nom" name="nom" class="form-control" value="{{ old('nom') }}" />
-                        {{$errors->first('nom')}}
+                        {{ $errors->first('nom') }}
                     </div>
                     <div class="form-group">
                         <label for="msgs">Message:</label>

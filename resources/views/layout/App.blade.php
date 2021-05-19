@@ -53,7 +53,7 @@
     <body>
         <ul>
             <li><a href="{{ Route('Accueil') }}">Accueil</a></li>
-            <li><a href="{{ Route('About') }}">About</a></li>
+            <li><a href="{{ Route('user.index') }}">Users</a></li>
             <li><a href="{{ Route('Etudiant') }}">Etudiant</a></li>
             <li><a href="{{ Route('Contact') }}">Contact</a></li>
             <li><a href="{{ Route('Upload') }}">Upload</a></li>
